@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clock</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="button-holder" style="margin-left: 43%">
+        <a id="switch-theme" class="button" onclick="Switch()" id="switch" >Switch Theme</a>
+        <!-- <a id="switch-theme" class="button" onclick="set_Alarm()">Set Alarm</a> -->
+        <!--<a class="alarm-button"></a>-->
+    </div>
+    <div id="analog_clock">
+        <canvas id="canvas" width="400" height="400">
+        </canvas>
+    </div>
+    <div id="digital_clock" style="display:none">
+            <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+            <div class="button-holder" style="margin-left: 43%; margin-top:10px">
+                <a id="switch-theme" class="button" onclick="ChangeFormat()" id="switch" >Change Format</a>
+        </div>
+        </div>
+
+        <!-- alarm -->
+        <div id='alarm' style="display:none">
+                <h2 id='clock'></h2>
+            </div>
+    
+            <div id='alarm-container'>
+                <h1>Set Alarm Time</h1>
+                    <label>
+                        <div>
+                        <select id='alarmhrs' ></select>
+                        </div>
+                    </label>
+                    <label>
+                        <div>
+                        <select id='alarmmins' ></select>
+                        </div>
+                    </label>
+                    <label>
+                        <div>
+                        <select id='alarmsecs' ></select>
+                        </div>
+                    </label>
+                    <label>
+                        <div>
+                            <select id="ampm">
+                                <option value="AM">AM</option>
+                                <option value="PM">PM</option>
+                            </select>
+                        </div>
+                    </label>
+                    </div>
+            </div>
+    
+            <div id='buttonHolder'>
+                <div>
+                    <button  id='setButton' onClick='alarmSet()'>Set Alarm</button>
+                </div>
+    
+                <div>
+                    <button  id='clearButton' onClick='alarmClear()'>Clear Alarm</button>
+                </div>
+            </div>
+    
+    <script src="./assets/js/main.js"></script>
+    <script src="assets/js/alarm.js"></script>
+</body>
+
+</html>
